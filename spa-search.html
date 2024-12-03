@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+.spa-search-container {
+  background: linear-gradient(135deg, #e561a7 0%, #a166d9 100%);
+  border-radius: 24px;
+  padding: 32px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.spa-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.spa-header h2 {
+  color: white;
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.search-box {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.search-box input {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 18px;
+  width: 100%;
+  padding: 0;
+}
+
+.search-box input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.search-box input:focus {
+  outline: none;
+}
+
+.search-info {
+  display: flex;
+  justify-content: flex-end;
+  color: white;
+  font-size: 14px;
+  align-items: center;
+  gap: 8px;
+}
+
+.related-questions {
+  margin-top: 24px;
+}
+
+.related-questions h3 {
+  color: white;
+  font-size: 16px;
+  margin: 0 0 12px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.questions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.question-button {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 100px;
+  color: white;
+  padding: 12px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  text-align: left;
+  width: 100%;
+}
+
+.question-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+@media (max-width: 640px) {
+  .spa-search-container {
+    border-radius: 16px;
+    padding: 20px;
+  }
+  
+  .questions-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .spa-header h2 {
+    font-size: 24px;
+  }
+  
+  .search-box input {
+    font-size: 16px;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="spa-search-container">
+  <header class="spa-header">
+    <svg class="icon" viewBox="0 0 24 24">
+      <circle cx="11" cy="11" r="8"></circle>
+      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+    </svg>
+    <h2>Serenity Spa & Beauty</h2>
+  </header>
+  
+  <div class="search-box">
+    <svg class="icon" viewBox="0 0 24 24">
+      <circle cx="11" cy="11" r="8"></circle>
+      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+    </svg>
+    <input type="text" placeholder="Ask about beauty treatments...">
+    <div class="search-info">
+      <span>AI-powered search</span>
+      <svg class="icon" viewBox="0 0 24 24">
+        <path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707"></path>
+      </svg>
+    </div>
+  </div>
+  
+  <div class="related-questions">
+    <h3>
+      <svg class="icon" viewBox="0 0 24 24">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+      </svg>
+      Related Questions
+    </h3>
+    <div class="questions-grid">
+      <button class="question-button">Tell me about Botox treatments</button>
+      <button class="question-button">What are the options for cheek fillers?</button>
+      <button class="question-button">How much are lip fillers?</button>
+      <button class="question-button">How long do treatments last?</button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

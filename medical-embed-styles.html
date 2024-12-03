@@ -1,0 +1,68 @@
+<!-- Add this to your WordPress Customizer Additional CSS or theme's style.css -->
+<style>
+.medical-search-container {
+  background: linear-gradient(135deg, #34d399 0%, #059669 100%);
+  border-radius: 24px;
+  padding: 32px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  color: white;
+}
+
+.medical-search-box {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  padding: 16px 20px;
+  margin: 24px 0;
+}
+
+.medical-search-box input {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 18px;
+  width: 100%;
+  padding: 8px;
+}
+
+.medical-search-box input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.medical-questions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.medical-question-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 100px;
+  color: white;
+  padding: 12px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  transition: background-color 0.2s;
+}
+
+.medical-question-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 640px) {
+  .medical-search-container {
+    padding: 20px;
+    border-radius: 16px;
+  }
+  
+  .medical-questions {
+    grid-template-columns: 1fr;
+  }
+}
+</style>

@@ -1,0 +1,49 @@
+.logo-container {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.infinity-logo {
+  animation: gentle-spin 12s linear infinite;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));
+}
+
+.infinity-path {
+  stroke-dasharray: 160;
+  stroke-dashoffset: 160;
+  animation: draw 2s ease forwards, glow 2s ease-in-out infinite alternate;
+}
+
+.glow-text {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+@keyframes gentle-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes glow {
+  from {
+    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.5));
+    stroke-width: 3;
+  }
+  to {
+    filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.8));
+    stroke-width: 3.5;
+  }
+}
